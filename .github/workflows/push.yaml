@@ -1,5 +1,8 @@
 name: Print push event
-on: [push]
+on: 
+  push:
+    paths:
+      - '.dockerfile/Dockerfile'
 run-name: push to main
 jobs:
   print-push-event:
