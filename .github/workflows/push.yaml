@@ -1,5 +1,6 @@
-name: Print push event info in runner
+name: Print push event
 on: [push]
+run-name: push to main
 jobs:
   print-push-event:
     runs-on: ubuntu-latest
