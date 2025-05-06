@@ -1,0 +1,11 @@
+name: Print push event info in runner
+on: [push]
+jobs:
+  print-push-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout $GITHUB_REPOSITORY repository
+        uses: actions/checkout@v4
+      - name: print 
+        run: ${{ toJson(github) }}"
+         
