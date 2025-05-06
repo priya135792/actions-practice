@@ -1,7 +1,7 @@
-name: Print push event info in runner
+name: Print pull event
 on: [pull_request]
 jobs:
-  print-push-event:
+  print-pulls-event:
     runs-on: ubuntu-latest
     steps:
       - name: checkout ${{ github.repository }} repository
