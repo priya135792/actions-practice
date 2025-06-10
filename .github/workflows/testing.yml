@@ -18,3 +18,16 @@ jobs:
           else
             echo "not main"
           fi
+      - name: store variable
+        run: |
+           echo "my_var = 'true'" >> GITHUB_ENV
+  testing-check-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: debug the value
+        run: | 
+          echo $my_var
+  
+      
