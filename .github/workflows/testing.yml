@@ -15,8 +15,6 @@ jobs:
         run: |
           if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
             echo "branch_env=prod" >> $GITHUB_OUTPUT
-            echo "branch_repo=${JFROG_PROD_REPO}" >> $GITHUB_OUTPUT
           else
             echo "branch_env=dev" >> $GITHUB_OUTPUT
-            echo "branch_repo=${{ secrets.JFROG_DEV_REPO}" >> $GITHUB_OUTPUT
           fi
