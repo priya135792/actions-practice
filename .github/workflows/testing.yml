@@ -13,7 +13,7 @@ jobs:
       - name: Set environment based on branch
         id: env
         run: |
-          if [[ "${github.ref}" == "refs/heads/main" ]]; then
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
             echo "branch_env=prod" >> $GITHUB_OUTPUT
             echo "branch_repo=${JFROG_PROD_REPO}" >> $GITHUB_OUTPUT
           else
